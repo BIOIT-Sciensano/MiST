@@ -1,4 +1,5 @@
 import shutil
+import sys
 from importlib.resources import files
 from pathlib import Path
 from typing import Any
@@ -63,7 +64,7 @@ class BIGSDbAuthDownloader(BaseDownloader):
         command = Command(
             ' '.join(
                 [
-                    'python',
+                    sys.executable,
                     self.path_script,
                     '--key_name',
                     self._key_name,
